@@ -1,0 +1,245 @@
+/* для кирилицы &display=swap&subset=cyrillic-ext */
+
+@font-face {
+	font-family: "OblivionFont";
+	src: url("../fonts/OblivionFont.woff2") format("woff2"), url("../fonts/OblivionFont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+ul {
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 1;
+	color: black;
+	font-family: OblivionFont;
+	font-size: 18px;
+	background: url("../img/wallpaper.jpeg") 0 0 / 100% no-repeat;
+	background-attachment: fixed;
+}
+p {
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+html {
+	scroll-behavior: smooth;
+}
+/* =====================шапка=================== */
+.container {
+	max-width: 90%;
+	margin: 25px auto;
+	border-left: 15px double grey;
+	border-right: 15px double grey;
+}
+
+.title {
+	font-size: 650%;
+	max-width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0.99;
+	color: rgb(78, 6, 6);
+}
+
+img.logo {
+	max-width: 30%;
+	min-width: 20%;
+}
+
+.title:hover {
+	font-size: 650%;
+	max-width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0.99;
+	background: linear-gradient(to bottom, #f3c5bd 0%, #ea2803 53%, #ff6600 80%, #c72200 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.title:hover::after {
+	content: "";
+	background: url(../img/torch2.png) 0 0 no-repeat;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	margin: 0px 0px 0px -380px;
+	filter: drop-shadow(30px 20px 30px rgb(177, 180, 13));
+}
+
+.start-oblivion {
+	height: 85px;
+	width: 200px;
+	font-size: 120%;
+	background-color: rgb(63, 3, 3);
+	color: white;
+	border: 5px solid red;
+	display: block;
+	margin: 2% auto;
+	text-align: center;
+	padding: 2%;
+	cursor: pointer;
+}
+
+.start-oblivion:hover {
+	box-shadow: 0px 0px 40px red;
+}
+.start-oblivion:active {
+	box-shadow: inset -100px 100px 100px 100px rgb(141, 5, 5);
+	border: 5px solid red;
+	font-size: 110%;
+}
+
+.start-oblivion:focus {
+	outline: 4px solid rgb(238, 105, 57);
+	box-shadow: 40px 40px 20px rgb(92, 6, 3);
+}
+
+/* ===================тело================ */
+
+.chapter {
+	margin: 25% auto 0;
+	padding: 30px;
+	max-width: 90%;
+	height: 100%;
+	font-size: 200%;
+	border: 3px solid red;
+	background: url("../img/wall.jpeg") 0 0 / 100% no-repeat;
+	display: none;
+}
+
+.chapter:target {
+	display: block;
+	box-shadow: 0px -30px 100px #c72200;
+}
+
+.text {
+	color: white;
+	line-height: 250%;
+	margin: 0px 0px 0px 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.dungeon {
+	float: left;
+	max-width: 50%;
+	padding-right: 15px;
+}
+
+.chapter::first-letter {
+	font-size: 150%;
+	color: red;
+}
+
+.quit,
+.continue {
+	display: inline-block;
+	color: white;
+	max-width: 20%;
+	margin: 2% auto;
+	padding: 10px;
+	text-align: center;
+	border: 5px solid red;
+	border-radius: 40%;
+	background-color: rgb(10, 2, 2);
+	border-bottom: 7px solid red;
+	cursor: pointer;
+	font-size: 75%;
+}
+
+.continue {
+	margin: 0% 0% 0% 75%;
+}
+
+.quit:hover,
+.continue:hover {
+	box-shadow: 0px 0px 30px #da4123;
+}
+
+.quit:active,
+.continue:active {
+	box-shadow: inset -100px 100px 100px 100px rgb(17, 12, 12);
+	border: 6px solid #ff6600;
+	border-bottom: 2px solid #ff6600;
+	border-top: 1px solid #ff6600;
+	font-size: 30%;
+}
+
+.quit:focus,
+.continue:focus {
+	outline: 4px solid rgb(238, 105, 57);
+	box-shadow: 40px 40px 20px rgb(92, 6, 3);
+}
+
+.door {
+	margin: 2% 0px 0px 30%;
+	border: 6px dotted #e21d03;
+}
+
+.door:hover {
+	filter: drop-shadow(0px 0px 10px rgb(94, 255, 0));
+}
+
+.gates {
+	cursor: grab;
+}
+
+div#part4 {
+	color: white;
+	line-height: 250%;
+	background: none;
+}
+
+.door2 {
+	width: 25%;
+	margin-left: 27.5%;
+	cursor: grab;
+}
+
+.door2:hover {
+	border: 2px solid #ff0000;
+	filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
+}
